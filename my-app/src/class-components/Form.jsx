@@ -16,8 +16,8 @@ export class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                {this.state.arr.map((item) => {
-                    return <div>{item}</div>
+                {this.state.arr.map((item, idx) => {
+                    return <div key={idx} >{item}</div>
                 })}
                 <p> Name: {this.state.name}</p>
                 <input type="text" onChange={this.handleChangeName} />
